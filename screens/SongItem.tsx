@@ -1,19 +1,31 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 
 const SongItem: React.FC<{
     song: string,
     artist: string,
-    cover: string, // path to cover image
-}> = ({song, artist, cover}) => {
+    image: string,
+}> = ({song, artist, image}) => {
     return (
-        // temp view
+        // TODO: learn to format with flexbox
         <View>
             <Text>{song}</Text>
             <Text>{artist}</Text>
-            <Text>{cover}</Text>
+            <CoverImage filename={image}/>
         </View>
     );
 };
+
+// TODO: fix tailwind className issue
+const CoverImage: React.FC<{
+    filename: string
+}> = (filename) => {
+    return (
+        <Image
+            className='w-150 h-150'
+            src={require('../assets/cover/' + filename)}
+        />
+    );
+}
 
 export default SongItem;

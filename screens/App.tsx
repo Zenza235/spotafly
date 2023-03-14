@@ -7,7 +7,7 @@ export default function App() {
     <SongItem
       song="Temp title"
       artist="Temp artist"
-      cover=""
+      image="metaverse_camellia.png"
     />
   );
 }
