@@ -8,7 +8,9 @@ module.exports = {
         200: '#393053',
         300: '#443C68',
         400: '#635985',
-      }
+      },
+      title:   '#FFFFFF',
+      heading: '#AAAAAA',
     },
     extend: {},
   },
