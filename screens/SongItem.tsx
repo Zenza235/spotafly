@@ -22,8 +22,8 @@ const CoverImage: React.FC<{
 }> = (filename) => {
     return (
         <Image
-            className='w-150 h-150'
-            src={require('../assets/cover/' + filename)}
+            className="w-150 h-150"
+            src={require("../assets/cover/" + filename)}
         />
     );
 }
