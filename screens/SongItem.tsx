@@ -8,7 +8,7 @@ const SongItem: React.FC<{
 }> = ({song, artist, image}) => {
     return (
         // TODO: learn to format with flexbox
-        <View>
+        <View style={{backgroundColor: "#FFFFFF", alignItems: "flex-start"}}>
             <Text>{song}</Text>
             <Text>{artist}</Text>
             <CoverImage filename={image}/>
@@ -21,7 +21,7 @@ const CoverImage: React.FC<{
     filename: string
 }> = (filename) => {
     return (
-        <Image
+        <img
             className="w-150 h-150"
             src={require("../assets/cover/" + filename)}
         />
