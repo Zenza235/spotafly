@@ -7,23 +7,23 @@ const SongItem: React.FC<{
     image: string,
 }> = ({song, artist, image}) => {
     return (
-        // TODO: learn to format with flexbox
-        <View>
-            <Text>{song}</Text>
-            <Text>{artist}</Text>
-            <CoverImage filename={image}/>
+        <View className="flex">
+            <CoverImage className="w-1/4" filename={image}/>
+            <View className="w-3/4">
+                <Text className="text-title">{song}</Text>
+                <Text className="text-header">{artist}</Text>
+            </View>
         </View>
     );
 };
 
-// TODO: fix tailwind className issue
 const CoverImage: React.FC<{
     filename: string
 }> = (filename) => {
     return (
         <Image
             className="w-150 h-150"
-            src={require("../assets/cover/" + filename)}
+            source={require("../assets/cover/" + filename)}
         />
     );
 }
