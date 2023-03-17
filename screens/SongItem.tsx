@@ -23,10 +23,11 @@ const CoverImage: React.FC<{
     return (
         <View>
         <Image
-            source={require("../assets/covers/" + filename)}
+            source={require("../assets/covers/metaverse_camellia.png")}
         />
         </View>
     );
 }
 
 export default SongItem;
+//require("../assets/covers/" + filename)r
