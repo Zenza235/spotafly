@@ -4,6 +4,7 @@ import { View, Text, Image } from "react-native";
 const HomeScreen: React.FC = () => {
     return (
         <View>
+        <Text style={{backgroundColor: "#000000"}}>HIIIII PLEASE WORK!!</Text>
         <SongItem
           song="Metaverse Do Be Like This"
           artist="Camellia"

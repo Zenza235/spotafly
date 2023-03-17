@@ -21,10 +21,11 @@ const CoverImage: React.FC<{
     filename: string
 }> = (filename) => {
     return (
-        <img
-            className="w-150 h-150"
-            src={require("../assets/cover/" + filename)}
+        <View>
+        <Image
+            source={require("../assets/covers/" + filename)}
         />
+        </View>
     );
 }
 
