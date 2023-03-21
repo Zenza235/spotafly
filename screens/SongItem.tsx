@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
+// TODO: use expo-av for audio
 
 const SongItem: React.FC<{
     song: string,
@@ -10,9 +11,11 @@ const SongItem: React.FC<{
     return (
         // TODO: learn to format with flexbox
         <View style={{backgroundColor: "#FFFFFF", alignItems: "flex-start"}}>
-            <Text>{song}</Text>
-            <Text>{artist}</Text>
-            <CoverImage filename={image}/>
+            <Pressable onPress={/>pulls up a modal (the bottom bar that shows currently playing audio)/}>
+                <CoverImage filename={image}/>
+                <Text>{song}</Text>
+                <Text>{artist}</Text>
+            </Pressable>
         </View>
     );
 };
