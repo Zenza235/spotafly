@@ -5,6 +5,10 @@ import { View, Text, Image, Pressable } from "react-native";
 var imageFilenames = ["covers/metaverse_camellia.png"];
 var imageSources = [require("../assets/covers/metaverse_camellia.png")];
 
+function onPress() {
+
+}
+
 const SongItem: React.FC<{
     song: string,
     artist: string,
@@ -14,7 +18,7 @@ const SongItem: React.FC<{
     return (
         // TODO: learn to format with flexbox
         <View style={{backgroundColor: "#FFFFFF", alignItems: "flex-start"}}>
-            <Pressable onPress={/>pulls up a modal (the bottom bar that shows currently playing audio)/}>
+            <Pressable onPress={() => { onPress();}}>
                 <CoverImage filename={imageFilenames[parseInt(imageID)]}/>
                 <Text>{song}</Text>
                 <Text>{artist}</Text>
