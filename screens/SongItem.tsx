@@ -1,17 +1,21 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 
+var imageFilenames = ["covers/metaverse_camellia.png"];
+var imageSources = [require("../assets/covers/metaverse_camellia.png")];
+
 const SongItem: React.FC<{
     song: string,
     artist: string,
-    image: string,
-}> = ({song, artist, image}) => {
+    imageID: string,
+    
+}> = ({song, artist, imageID}) => {
     return (
         // TODO: learn to format with flexbox
         <View style={{backgroundColor: "#FFFFFF", alignItems: "flex-start"}}>
             <Text>{song}</Text>
             <Text>{artist}</Text>
-            <CoverImage filename={image} source={require("../assets/covers/" + image)}/>
+            <CoverImage filename={imageFilenames[parseInt(imageID)]} source={imageSources[parseInt(imageID)]}/>
         </View>
     );
 };
